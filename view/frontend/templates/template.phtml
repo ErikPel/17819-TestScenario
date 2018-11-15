@@ -1,0 +1,8 @@
+<?php
+
+$productCollection = $this->getCollection();
+$productCollection->addAttributeToSelect('*');
+foreach($productCollection as $product) {
+    $category = $product->getCategory();
+    echo $product->getProductUrl();
+}
